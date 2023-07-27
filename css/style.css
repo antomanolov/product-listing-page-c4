@@ -1,0 +1,182 @@
+/* general style */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-col: #8C52FF;
+    --secondary-col: #38B6FF;
+    --bg-col:#faf9fe ; 
+    --top-margin: 2rem;
+    
+    
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: var(--bg-col);
+    
+}
+
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: var(--primary-col);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+/* end of general style */
+
+/* nav style */
+nav {
+    position: sticky;
+    top: 0;
+}
+
+nav .container {
+    padding: 0.2rem;
+    margin-top: var(--top-margin);
+    display: flex;
+    justify-content: space-around;
+
+}
+
+nav .container .logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+nav .container i {
+    font-size: 2rem;
+    color: var(--primary-col);
+}
+
+
+nav .menu {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+nav .menu .items {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* end of nav style */
+
+/* category and sorting style */
+
+.category-sort {
+    margin-top: var(--top-margin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.category{
+    align-self: center;
+    text-align: start;
+    max-width: 30rem;
+}
+
+/* dropdown */
+/* I decided to make the dropdown 
+from scratch because the styling is way easier */
+
+
+.dropbtn {
+    background-color: var(--secondary-col);
+    color: black;
+    padding: 0.2rem 2.4rem;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+ 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+ 
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 8rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+  }
+
+.dropdown-content a{
+    display: block;
+    background-color: var(--bg-col);
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: var(--primary-col);}
+/* end of category and sorting style */
+
+/* filter and products style */
+main {
+    background-color: white;
+}
+.filter-products {
+    margin-top: var(--top-margin);
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: minmax(100vh, auto);
+}
+
+/* left-side (filter sidebar) */
+.filter{
+    border: 1px solid red;
+}
+
+.products {
+    border: 1px solid black;
+}
+
+/* footer */
+footer{
+    margin-top: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.box {
+    border: 1px solid blue;
+    width: 100px;
+    height: 100px;
+}
