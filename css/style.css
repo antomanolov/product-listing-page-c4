@@ -26,7 +26,7 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     background: var(--bg-col);
-    
+    font-size: 18px;
 }
 
 input {
@@ -151,6 +151,7 @@ from scratch because the styling is way easier */
 
 .dropdown-content a{
     display: block;
+    font-size: 1rem;
     background-color: var(--bg-col);
 }
 
@@ -174,6 +175,7 @@ main {
 .filter{
     margin-top: var(--top-margin);
     margin-bottom: var(--top-margin);
+    
 }
 
 .filter-group1 h4,
@@ -190,9 +192,44 @@ main {
 /* right-side (products) */
 
 .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+    justify-content: center;
+    grid-auto-rows: 450px;
+    gap: 0.5rem;
     border-left: 4px solid var(--primary-col);
     margin-top: var(--top-margin);
     margin-bottom: var(--top-margin);
+
+}
+
+.box{
+    /* border: 1px solid red; */
+    margin-left: var(--top-margin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+.box img {
+    width: 80%;
+    height: 80%;
+}
+.item-desc {
+    margin-top: 0.2rem;
+    text-align: center;
+}
+
+#hr-price {
+    width: 120px;
+    height: 2px;
+}
+.price {
+    text-align: center;
+}
+
+.price span{
+    text-decoration: line-through;
+    color: gray;
 }
 
 /* footer */
