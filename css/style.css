@@ -176,7 +176,12 @@ from scratch because the styling is way easier */
 main {
     background-color: white;
 }
-
+.counter {
+    margin-top: 20px;
+    text-align: end;
+    font-size: 0.80rem;
+    margin-right: 1rem;
+}
 .filter-products {
     margin-top: var(--top-margin);
     display: grid;
@@ -270,6 +275,30 @@ footer {
 }
 
 @media screen and (max-width: 990px) {
+    body {
+        font-size: 15px;
+    }
+    
+    
+    .logo-brand h1{
+        display: none;
+    }
+    nav .container {
+        width: 100%;
+        margin-top: 0;
+        gap: 0;
+    }
+
+    nav .menu .items {
+        gap: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .category p {
+        display: none;
+    }
+    
+    
     .filter {
         display: none;
     }
@@ -282,5 +311,4 @@ footer {
     .products {
         border: none;
     }
-
 }
