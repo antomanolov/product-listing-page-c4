@@ -5,10 +5,10 @@
 :root {
     --primary-col: #8C52FF;
     --secondary-col: #38B6FF;
-    --bg-col:#faf9fe ; 
+    --bg-col: #faf9fe;
     --top-margin: 2rem;
-    
-    
+
+
 }
 
 *,
@@ -37,13 +37,14 @@ input {
 
 
 hr {
-    
+
     width: 60%;
     height: 3.5px;
     margin: 1rem auto;
     color: black;
     background-color: var(--primary-col);
 }
+
 a {
     color: black;
 }
@@ -56,6 +57,7 @@ a:hover {
     width: 80%;
     margin: 0 auto;
 }
+
 /* end of general style */
 
 /* nav style */
@@ -64,7 +66,8 @@ nav {
     top: 0;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background-color: var(--bg-col);    
+    background-color: var(--bg-col);
+    z-index: 10;
 }
 
 nav .container {
@@ -90,7 +93,7 @@ nav .container i {
 nav .menu {
     display: flex;
     align-items: center;
-    
+
 }
 
 
@@ -114,7 +117,7 @@ nav .menu .items {
     gap: 3rem;
 }
 
-.category{
+.category {
     align-self: center;
     text-align: start;
     max-width: 30rem;
@@ -132,38 +135,48 @@ from scratch because the styling is way easier */
     font-size: 16px;
     border: none;
     border-radius: 3px;
-  }
-  
- 
-  .dropdown {
+}
+
+
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
- 
-  .dropdown-content {
+}
+
+
+.dropdown-content {
     display: none;
     position: absolute;
     min-width: 8rem;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    
-  }
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
-.dropdown-content a{
+}
+
+.dropdown-content a {
     display: block;
     font-size: 1rem;
     background-color: var(--bg-col);
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: var(--primary-col);}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--primary-col);
+}
+
 /* end of category and sorting style */
 
 /* filter and products style */
 main {
     background-color: white;
 }
+
 .filter-products {
     margin-top: var(--top-margin);
     display: grid;
@@ -172,14 +185,14 @@ main {
 }
 
 /* left-side (filter sidebar) */
-.filter{
+.filter {
     margin-top: var(--top-margin);
     margin-bottom: var(--top-margin);
-    
+
 }
 
 .filter-group1 h4,
-.filter-group2 h4{
+.filter-group2 h4 {
     text-align: center;
 }
 
@@ -203,17 +216,19 @@ main {
 
 }
 
-.box{
+.box {
     /* border: 1px solid red; */
     margin-left: var(--top-margin);
     display: flex;
     flex-direction: column;
     align-items: center;
-    }
+}
+
 .box img {
     width: 80%;
     height: 80%;
 }
+
 .item-desc {
     margin-top: 0.2rem;
     text-align: center;
@@ -223,21 +238,23 @@ main {
     width: 120px;
     height: 2px;
 }
+
 .price {
     text-align: center;
 }
 
-.price span{
+.price span {
     text-decoration: line-through;
     color: gray;
 }
 
 /* footer */
-footer{
+footer {
     margin-top: 20px;
     width: 80%;
     margin: 0 auto;
 }
+
 .footer {
     display: flex;
     align-items: center;
@@ -246,3 +263,24 @@ footer{
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1200px) {
+    .filter-products {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .filter {
+        display: none;
+    }
+
+    .filter-products {
+        grid-template-columns: 1fr;
+
+    }
+
+    .products {
+        border: none;
+    }
+
+}
