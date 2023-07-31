@@ -1,3 +1,4 @@
+
 // This is the data object from where I get all the info for the product page
 const mockData = {
     'dresses':[
@@ -134,7 +135,7 @@ const mockData = {
         {'brand': 'the boutique', 'price': 410, 'discount': null, 'color': '', 'material': 'Gold','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_327113.jpg'},
     ],
     'bags':[
-        {'brand': 'the boutique', 'price': 110, 'discount': 10, 'color': 'Black', 'material': 'Leather','img': 'https://www.ivet.bg/product/103461/damska-chanta-famanda.html'},
+        {'brand': 'the boutique', 'price': 110, 'discount': 10, 'color': 'Black', 'material': 'Leather','img': 'https://www.ivet.bg/product/103461/damska-chanta-famanda.jpg'},
         {'brand': 'the boutique', 'price': 230, 'discount': 23, 'color': 'Green', 'material': 'Leather','img': 'https://www.ivet.bg/product/103448/damska-chanta-meferda-green.html'},
         {'brand': 'the boutique', 'price': 410, 'discount': 41, 'color': 'Purple', 'material': 'Leather','img': 'https://www.ivet.bg/product/103449/damska-chanta-meferda-fuchsia.html'},
         {'brand': 'the boutique', 'price': 110, 'discount': 11, 'color': 'Black', 'material': 'Leather','img': 'https://www.ivet.bg/product/103450/damska-chanta-meferda-black.html'},
@@ -196,17 +197,62 @@ const categoryH2 = document.querySelector('.category h2')
 const categoryPara = document.querySelector('.category p')
 
 // load more button
-const loadMore = document.querySelector('.load-more button')
+const loadAll = document.querySelector('.load-more button')
 
 // products
 const products = document.querySelector('.products')
+
+// data product creator
+
+function createProducts (product, endLoop) {
+    for (let i = 0; i < endLoop; i++) {
+    const boxDiv = document.createElement('div')
+    boxDiv.classList.add('box')
+    const img = document.createElement('img')
+    const descDiv = document.createElement('div')
+    const pItemDesc = document.createElement('p')
+    pItemDesc.classList.add('item-desc')
+    pItemDesc.textContent = `${mockData[product][i].color} ${mockData[product][i].brand.toUpperCase()} shoes`
+    const hr = document.createElement('hr')
+    const pPrice = document.createElement('p')
+    pPrice.classList.add('price')
+    if(mockData[product][i].discount != null) {
+        pPrice.innerHTML = `${mockData[product][i].discount}$ &nbsp; <span>${mockData[product][i].price}$</span>` 
+    } else {
+        pPrice.textContent = `${mockData[product][i].price}$`
+    }
+    
+    descDiv.classList.add('description')
+    descDiv.append(pItemDesc, hr, pPrice)
+    img.src = mockData[product][i].img
+    
+    boxDiv.appendChild(img)
+    boxDiv.appendChild(descDiv)
+    
+    products.appendChild(boxDiv)
+    }
+}
+// initial page call
+createProducts('dresses', 21)
 
 // change the category and description when category is clicked
 btnArray.forEach(btn => btn.addEventListener('click', () =>{
     categoryH2.textContent = btn.textContent
     categoryPara.textContent = `This category includes all ${btn.textContent.toLowerCase()} in The Boutique Shop.`
+    loadAll.style.display = 'inline'
+    products.innerHTML = ''
+    createProducts(btn.textContent.toString().toLowerCase(), 21)
 }))
-// filter functionality
+
+loadAll.addEventListener('click', () => {
+    let currentProduct = categoryH2.textContent.toLowerCase()
+    createProducts(currentProduct, mockData[currentProduct].length)
+    loadAll.style.display = 'none'
+})
+
+
+
+// filter functionality on mobile 
 hamburgerBtn.addEventListener('click', () => {
     if(hamburgerBtn.classList.contains('active')){
         filterGroup1.style.display = 'none'
@@ -219,34 +265,3 @@ hamburgerBtn.addEventListener('click', () => {
     }
    
 })
-
-// data product creator
-for (let i = 0; i < 21; i++) {
-    const boxDiv = document.createElement('div')
-boxDiv.classList.add('box')
-const img = document.createElement('img')
-const descDiv = document.createElement('div')
-const pItemDesc = document.createElement('p')
-pItemDesc.classList.add('item-desc')
-pItemDesc.textContent = `${mockData.shoes[i].color} ${mockData.shoes[i].brand.toUpperCase()} shoes`
-const hr = document.createElement('hr')
-const pPrice = document.createElement('p')
-pPrice.classList.add('price')
-if(mockData.shoes[i].discount != null) {
-    pPrice.innerHTML = `${mockData.shoes[i].discount}$ &nbsp; <span>${mockData.shoes[i].price}$</span>` 
-} else {
-    pPrice.textContent = `${mockData.shoes[i].price}$`
-}
-
-descDiv.classList.add('description')
-descDiv.append(pItemDesc, hr, pPrice)
-img.src = mockData.shoes[i].img
-
-boxDiv.appendChild(img)
-boxDiv.appendChild(descDiv)
-
-products.appendChild(boxDiv)
-}
-
-
-
