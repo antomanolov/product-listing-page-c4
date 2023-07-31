@@ -205,7 +205,9 @@ main {
     margin-bottom: var(--top-margin);
 }
 
-
+.hoverby {
+    display: none;
+}
 
 /* right-side (products) */
 
@@ -304,16 +306,26 @@ footer {
    
 
     .filter-products {
-        grid-template-columns: 1fr;
-        
-
+        display: block;
     }
 
     .products {
-        margin-top: -10rem;
         border: none;
     }
 
-   
+    .filter-group1,
+    .filter-group2 {
+        display: none;
+    }
+    
+   .hoverby {
+    display: block;
+    float: right;
+    font-size: 2rem;
+   }
+
+   .filter h3{
+    font-size: 1.5rem;
+   }
 
 }
