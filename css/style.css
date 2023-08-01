@@ -172,6 +172,19 @@ from scratch because the styling is way easier */
     background-color: var(--primary-col);
 }
 
+.reset {
+    background-color: var(--primary-col);
+    padding: 0.2rem 2rem;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+}
+
+.reset:hover {
+    background-color: var(--secondary-col);
+    color: black;
+}
+
 /* end of category and sorting style */
 
 /* filter and products style */
@@ -201,6 +214,8 @@ main {
    position: sticky;
    top: 7rem;
 }
+
+
 
 .filter-group1 h4,
 .filter-group2 h4 {
@@ -385,6 +400,8 @@ footer {
     font-size: 2rem;
     right: 0;
     bottom: 2rem;
-    
-}
+    }
+    .category-sort {
+        gap: 1rem;
+    }
 }
