@@ -290,22 +290,61 @@ function goTop() {
     document.documentElement.scrollTop = 0;
 }
 
-function sortFunc(action ,key, keyword) {
+function sortFuncAlpha(action, key, keyword) {
     if (action == 'ascending') {
         mockData[key].sort(function (a, b) {
             let textA = a[keyword]
             let textB = b[keyword]
             return textA < textB ? -1 : 1
         })
-        console.log(mockData[key])
-    } else if (action == 'descending'){
+
+    } else if (action == 'descending') {
         mockData[key].sort(function (a, b) {
             let textA = a[keyword]
             let textB = b[keyword]
             return textA > textB ? -1 : 1
         })
     }
-    
+
+    createProducts(key, mockData[key].length)
+}
+// I made this function seperate from the alpha one, becaouse in the price we got discount too
+// and it's more verbose to separate the two functions, even on the price of repeating almost the same code
+function sortFuncPrice(action, key) {
+    let numA = 0
+    let numB = 0
+    if (action == 'ascending') {
+        mockData[key].sort(function (a, b) {
+
+            if (a['discount'] != null) {
+                numA = a['discount']
+            } else {
+                numA = a['price']
+            }
+            if (b['discount'] != null) {
+                numB = b['discount']
+            } else {
+                numB = b['price']
+            }
+            return numA < numB ? -1 : 1
+        })
+
+    } else if (action == 'descending') {
+        mockData[key].sort(function (a, b) {
+            if (a['discount'] != null) {
+                numA = a['discount']
+            } else {
+                numA = a['price']
+            }
+            if (b['discount'] != null) {
+                numB = b['discount']
+            } else {
+                numB = b['price']
+            }
+            return numA > numB ? -1 : 1
+        })
+    }
+
     createProducts(key, mockData[key].length)
 }
 
@@ -356,18 +395,29 @@ hamburgerBtn.addEventListener('click', () => {
 // sort functionality event listeners
 // todo make it working for jewelry color == material
 // todo make it work with discounts
-alphaAsc.addEventListener('click', ()=>{
-    sortFunc('ascending',categoryH2.textContent.toLowerCase(), 'color')
+alphaAsc.addEventListener('click', () => {
+    let product = categoryH2.textContent.toLowerCase()
+    if (product == 'jewelry') {
+        sortFuncAlpha('ascending', product, 'material')
+    } else {
+        sortFuncAlpha('ascending', product, 'color')
+    }
+
 })
 
-alphaDesc.addEventListener('click', ()=>{
-    sortFunc('descending',categoryH2.textContent.toLowerCase(), 'color')
+alphaDesc.addEventListener('click', () => {
+    let product = categoryH2.textContent.toLowerCase()
+    if (product == 'jewelry') {
+        sortFuncAlpha('descending', product, 'material')
+    } else {
+        sortFuncAlpha('descending', product, 'color')
+    }
 })
 
-priceAsc.addEventListener('click', ()=>{
-    sortFunc('ascending',categoryH2.textContent.toLowerCase(), 'price')
+priceAsc.addEventListener('click', () => {
+    sortFuncPrice('ascending', categoryH2.textContent.toLowerCase())
 })
 
-priceDesc.addEventListener('click', ()=>{
-    sortFunc('descending',categoryH2.textContent.toLowerCase(), 'price')
+priceDesc.addEventListener('click', () => {
+    sortFuncPrice('descending', categoryH2.textContent.toLowerCase())
 })
