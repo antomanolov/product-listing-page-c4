@@ -214,6 +214,13 @@ const goTopBtn = document.querySelector('.go-top');
 
 // data product creator
 function createProducts (product, endLoop) {
+    let productSingular = ''
+    if(product == 'dresses') {
+        productSingular = 'dress'
+    } else {
+        productSingular = product
+    }
+    
     for (let i = 0; i < endLoop; i++) {
     const boxDiv = document.createElement('div')
     boxDiv.classList.add('box')
@@ -221,7 +228,12 @@ function createProducts (product, endLoop) {
     const descDiv = document.createElement('div')
     const pItemDesc = document.createElement('p')
     pItemDesc.classList.add('item-desc')
-    pItemDesc.textContent = `${mockData[product][i].color} ${mockData[product][i].brand.toUpperCase()} ${product}`
+    if(product == 'jewelry'){
+        pItemDesc.textContent = `${mockData[product][i].material}  ${productSingular}`
+    } else {
+        pItemDesc.textContent = `${mockData[product][i].color}  ${productSingular}`
+    }
+    
     const hr = document.createElement('hr')
     const pPrice = document.createElement('p')
     pPrice.classList.add('price')
@@ -259,7 +271,7 @@ function goTop () {
 }
 
 // initial page call
-createProducts('dresses', 21);
+createProducts('dresses', 15);
 
 
 // ----- END OF FUNCTIONS -----
@@ -273,7 +285,7 @@ btnArray.forEach(btn => btn.addEventListener('click', () =>{
     categoryPara.textContent = `This category includes all ${btn.textContent.toLowerCase()} in The Boutique Shop.`
     loadAll.style.display = 'inline'
     products.innerHTML = ''
-    createProducts(btn.textContent.toLowerCase(), 21);
+    createProducts(btn.textContent.toLowerCase(), 15);
 }))
 
 loadAll.addEventListener('click', () => {
