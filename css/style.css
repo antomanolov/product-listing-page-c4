@@ -195,7 +195,11 @@ main {
 .filter {
     margin-top: var(--top-margin);
     margin-bottom: var(--top-margin);
+}
 
+.sticky-filter {
+   position: sticky;
+   top: 7rem;
 }
 
 .filter-group1 h4,
@@ -257,6 +261,20 @@ main {
     color: gray;
 }
 
+/* go to top button */
+.go-top {
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    font-size: 2.5rem;
+    color: #8C52FF;
+    display: none;
+}
+
+.go-top:hover {
+    color: var(--secondary-col);
+}
+
 /* footer */
 footer {
     margin-top: 20px;
@@ -298,6 +316,8 @@ footer {
     .filter-products {
         grid-template-columns: 1fr 3fr;
     }
+
+   
     
 }
 
@@ -350,5 +370,14 @@ footer {
    .filter h3{
     font-size: 1.5rem;
    }
+
+   .go-top {
+    position: fixed;
+    font-size: 2rem;
+    right: 0;
+    bottom: 2rem;
+    
+}
+
 
 }

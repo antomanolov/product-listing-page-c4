@@ -180,30 +180,39 @@ const mockData = {
     ],
 }
 
+// ----- DOM ELEMENTS -----
 // filter hamburger
-const filterGroup1 = document.querySelector('.filter-group1')
-const filterGroup2 = document.querySelector('.filter-group2')
-const hamburgerBtn = document.querySelector('.hoverby')
+const filterGroup1 = document.querySelector('.filter-group1');
+const filterGroup2 = document.querySelector('.filter-group2');
+const hamburgerBtn = document.querySelector('.hoverby');
 
 // category buttons
-const bagsButton = document.querySelector('.bags-btn')
-const shoesButton = document.querySelector('.shoes-btn')
-const jewelryButton = document.querySelector('.jewelry-btn')
-const scarfsButton = document.querySelector('.scarfs-btn')
-const btnArray = [bagsButton, shoesButton, jewelryButton, scarfsButton]
+const bagsButton = document.querySelector('.bags-btn');
+const shoesButton = document.querySelector('.shoes-btn');
+const jewelryButton = document.querySelector('.jewelry-btn');
+const scarfsButton = document.querySelector('.scarfs-btn');
+const btnArray = [bagsButton, shoesButton, jewelryButton, scarfsButton];
 
 // category and description
-const categoryH2 = document.querySelector('.category h2')
-const categoryPara = document.querySelector('.category p')
+const categoryH2 = document.querySelector('.category h2');
+const categoryPara = document.querySelector('.category p');
 
 // load more button
-const loadAll = document.querySelector('.load-more button')
+const loadAll = document.querySelector('.load-more button');
 
 // products
-const products = document.querySelector('.products')
+const products = document.querySelector('.products');
+
+// products couter
+const productsCount = document.querySelector('.counter')
+
+// go to top button
+const goTopBtn = document.querySelector('.go-top');
+// ----- END OF DOM ELEMENTS -----
+
+// ----- FUNCTIONS -----
 
 // data product creator
-
 function createProducts (product, endLoop) {
     for (let i = 0; i < endLoop; i++) {
     const boxDiv = document.createElement('div')
@@ -212,7 +221,7 @@ function createProducts (product, endLoop) {
     const descDiv = document.createElement('div')
     const pItemDesc = document.createElement('p')
     pItemDesc.classList.add('item-desc')
-    pItemDesc.textContent = `${mockData[product][i].color} ${mockData[product][i].brand.toUpperCase()} shoes`
+    pItemDesc.textContent = `${mockData[product][i].color} ${mockData[product][i].brand.toUpperCase()} ${product}`
     const hr = document.createElement('hr')
     const pPrice = document.createElement('p')
     pPrice.classList.add('price')
@@ -230,10 +239,33 @@ function createProducts (product, endLoop) {
     boxDiv.appendChild(descDiv)
     
     products.appendChild(boxDiv)
+    productsCount.textContent = `products ${endLoop}/${mockData[product].length}`
     }
 }
+
+// function that detecs scrolling down
+function scrollFunction() {
+    if(document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
+        goTopBtn.style.display = 'block';
+    } else {
+        goTopBtn.style.display = 'none';
+    }
+}
+
+// function that returns to top of the page
+function goTop () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
 // initial page call
-createProducts('dresses', 21)
+createProducts('dresses', 21);
+
+
+// ----- END OF FUNCTIONS -----
+
+
+// ----- ADDING EVENT LISTENERS/FUNCTIONALITY -----
 
 // change the category and description when category is clicked
 btnArray.forEach(btn => btn.addEventListener('click', () =>{
@@ -241,27 +273,30 @@ btnArray.forEach(btn => btn.addEventListener('click', () =>{
     categoryPara.textContent = `This category includes all ${btn.textContent.toLowerCase()} in The Boutique Shop.`
     loadAll.style.display = 'inline'
     products.innerHTML = ''
-    createProducts(btn.textContent.toLowerCase(), 21)
+    createProducts(btn.textContent.toLowerCase(), 21);
 }))
 
 loadAll.addEventListener('click', () => {
-    let currentProduct = categoryH2.textContent.toLowerCase()
-    createProducts(currentProduct, mockData[currentProduct].length)
-    loadAll.style.display = 'none'
+    let currentProduct = categoryH2.textContent.toLowerCase();
+    createProducts(currentProduct, mockData[currentProduct].length);
+    loadAll.style.display = 'none';
 })
+// go to top button functionality
+window.onscroll = function() {scrollFunction()}
+goTopBtn.addEventListener('click', goTop)
 
 
 
 // filter functionality on mobile 
 hamburgerBtn.addEventListener('click', () => {
     if(hamburgerBtn.classList.contains('active')){
-        filterGroup1.style.display = 'none'
-        filterGroup2.style.display = 'none'
-        hamburgerBtn.classList.remove('active')
+        filterGroup1.style.display = 'none';
+        filterGroup2.style.display = 'none';
+        hamburgerBtn.classList.remove('active');
     } else {
-        hamburgerBtn.classList.add('active')
-        filterGroup1.style.display = 'block'
-        filterGroup2.style.display = 'block'
+        hamburgerBtn.classList.add('active');
+        filterGroup1.style.display = 'block';
+        filterGroup2.style.display = 'block';
     }
    
 })
