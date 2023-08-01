@@ -212,6 +212,11 @@ const alphaDesc = document.querySelector('#descending-alppha')
 const priceAsc = document.querySelector('#ascending-price')
 const priceDesc = document.querySelector('#descending-price')
 
+// filter radio
+const colorRadio = document.querySelectorAll('input[name="color"]')
+const materialRadio = document.querySelectorAll('input[name="material"]')
+
+
 // reset filters/reload page
 const resetBtn = document.querySelector('.reset')
 
