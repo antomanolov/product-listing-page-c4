@@ -226,7 +226,7 @@ main {
 }
 
 .box {
-    /* border: 1px solid red; */
+    
     margin-left: var(--top-margin);
     display: flex;
     flex-direction: column;
@@ -272,7 +272,7 @@ footer {
     
 }
 
-/* load more */
+/* load all */
 .load-more {
     text-align: center;
     padding-bottom: 20px;
@@ -302,8 +302,6 @@ footer {
 }
 
 @media screen and (max-width: 990px) {
-    
-    /* to do: make filter section hide and show with a button */
     body {
         font-size: 15px;
     }
