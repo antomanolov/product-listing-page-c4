@@ -2,48 +2,48 @@
 // This is the data object from where I get all the info for the product page
 const mockData = {
     'dresses':[
-        {'brand': 'the boutique', 'price': 120, 'discount': 30, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342323.jpg'},
-        {'brand': 'the boutique', 'price': 80, 'discount': null, 'color': 'Black', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342267.jpg'},
-        {'brand': 'the boutique', 'price': 90, 'discount': null, 'color': 'Black', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341919.jpg'},
-        {'brand': 'the boutique', 'price': 110, 'discount': null, 'color': 'Purple', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_340892.jpg'},
-        {'brand': 'the boutique', 'price': 200, 'discount': null, 'color': 'Red', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341907.jpg'},
-        {'brand': 'the boutique', 'price': 210, 'discount': 40, 'color': 'Blue', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341503.jpg'},
-        {'brand': 'the boutique', 'price': 93, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341258.jpg'},
-        {'brand': 'the boutique', 'price': 340, 'discount': null, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
-        {'brand': 'the boutique', 'price': 120, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342323.jpg'},
-        {'brand': 'the boutique', 'price': 80, 'discount': 40, 'color': 'Black', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342267.jpg'},
-        {'brand': 'the boutique', 'price': 90, 'discount': null, 'color': 'Black', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341919.jpg'},
-        {'brand': 'the boutique', 'price': 110, 'discount': null, 'color': 'Purple', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_340892.jpg'},
-        {'brand': 'the boutique', 'price': 200, 'discount': null, 'color': 'Red', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341907.jpg'},
-        {'brand': 'the boutique', 'price': 210, 'discount': null, 'color': 'Blue', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341503.jpg'},
-        {'brand': 'the boutique', 'price': 93, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341258.jpg'},
-        {'brand': 'the boutique', 'price': 340, 'discount': 200, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
-        {'brand': 'the boutique', 'price': 120, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342323.jpg'},
-        {'brand': 'the boutique', 'price': 80, 'discount': null, 'color': 'Black', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342267.jpg'},
-        {'brand': 'the boutique', 'price': 90, 'discount': null, 'color': 'Black', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341919.jpg'},
-        {'brand': 'the boutique', 'price': 110, 'discount': null, 'color': 'Purple', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_340892.jpg'},
-        {'brand': 'the boutique', 'price': 200, 'discount': 120, 'color': 'Red', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341907.jpg'},
-        {'brand': 'the boutique', 'price': 210, 'discount': null, 'color': 'Blue', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341503.jpg'},
-        {'brand': 'the boutique', 'price': 93, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341258.jpg'},
-        {'brand': 'the boutique', 'price': 340, 'discount': 220, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
-        {'brand': 'the boutique', 'price': 120, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342323.jpg'},
-        {'brand': 'the boutique', 'price': 80, 'discount': null, 'color': 'Black', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342267.jpg'},
-        {'brand': 'the boutique', 'price': 90, 'discount': null, 'color': 'Black', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341919.jpg'},
-        {'brand': 'the boutique', 'price': 110, 'discount': null, 'color': 'Purple', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_340892.jpg'},
-        {'brand': 'the boutique', 'price': 200, 'discount': 65, 'color': 'Red', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341907.jpg'},
-        {'brand': 'the boutique', 'price': 210, 'discount': null, 'color': 'Blue', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341503.jpg'},
-        {'brand': 'the boutique', 'price': 93, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341258.jpg'},
-        {'brand': 'the boutique', 'price': 340, 'discount': null, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
-        {'brand': 'the boutique', 'price': 120, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342323.jpg'},
-        {'brand': 'the boutique', 'price': 80, 'discount': null, 'color': 'Black', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342267.jpg'},
-        {'brand': 'the boutique', 'price': 90, 'discount': null, 'color': 'Black', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341919.jpg'},
-        {'brand': 'the boutique', 'price': 110, 'discount': null, 'color': 'Purple', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_340892.jpg'},
-        {'brand': 'the boutique', 'price': 200, 'discount': 100, 'color': 'Red', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341907.jpg'},
-        {'brand': 'the boutique', 'price': 210, 'discount': 200, 'color': 'Blue', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341503.jpg'},
-        {'brand': 'the boutique', 'price': 93, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341258.jpg'},
-        {'brand': 'the boutique', 'price': 340, 'discount': 120, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
-        {'brand': 'the boutique', 'price': 340, 'discount': null, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
-        {'brand': 'the boutique', 'price': 340, 'discount': null, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
+        {'brand': 'the boutique', 'stars': 1,'price': 120, 'discount': 30, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342323.jpg'},
+        {'brand': 'the boutique', 'stars': 2,'price': 80, 'discount': null, 'color': 'Black', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342267.jpg'},
+        {'brand': 'the boutique', 'stars': 4,'price': 90, 'discount': null, 'color': 'Black', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341919.jpg'},
+        {'brand': 'the boutique', 'stars': 5,'price': 110, 'discount': null, 'color': 'Purple', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_340892.jpg'},
+        {'brand': 'the boutique', 'stars': 2,'price': 200, 'discount': null, 'color': 'Red', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341907.jpg'},
+        {'brand': 'the boutique', 'stars': 2,'price': 210, 'discount': 40, 'color': 'Blue', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341503.jpg'},
+        {'brand': 'the boutique', 'stars': 3,'price': 93, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341258.jpg'},
+        {'brand': 'the boutique', 'stars': 3,'price': 340, 'discount': null, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
+        {'brand': 'the boutique', 'stars': 5,'price': 120, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342323.jpg'},
+        {'brand': 'the boutique', 'stars': 5,'price': 80, 'discount': 40, 'color': 'Black', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342267.jpg'},
+        {'brand': 'the boutique', 'stars': 2,'price': 90, 'discount': null, 'color': 'Black', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341919.jpg'},
+        {'brand': 'the boutique', 'stars': 3,'price': 110, 'discount': null, 'color': 'Purple', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_340892.jpg'},
+        {'brand': 'the boutique', 'stars': 1,'price': 200, 'discount': null, 'color': 'Red', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341907.jpg'},
+        {'brand': 'the boutique', 'stars': 1,'price': 210, 'discount': null, 'color': 'Blue', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341503.jpg'},
+        {'brand': 'the boutique', 'stars': 1,'price': 93, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341258.jpg'},
+        {'brand': 'the boutique', 'stars': 3,'price': 340, 'discount': 200, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
+        {'brand': 'the boutique', 'stars': 4,'price': 120, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342323.jpg'},
+        {'brand': 'the boutique', 'stars': 4,'price': 80, 'discount': null, 'color': 'Black', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342267.jpg'},
+        {'brand': 'the boutique', 'stars': 1,'price': 90, 'discount': null, 'color': 'Black', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341919.jpg'},
+        {'brand': 'the boutique', 'stars': 2,'price': 110, 'discount': null, 'color': 'Purple', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_340892.jpg'},
+        {'brand': 'the boutique', 'stars': 2,'price': 200, 'discount': 120, 'color': 'Red', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341907.jpg'},
+        {'brand': 'the boutique', 'stars': 4,'price': 210, 'discount': null, 'color': 'Blue', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341503.jpg'},
+        {'brand': 'the boutique', 'stars': 5,'price': 93, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341258.jpg'},
+        {'brand': 'the boutique', 'stars': 5,'price': 340, 'discount': 220, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
+        {'brand': 'the boutique', 'stars': 4,'price': 120, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342323.jpg'},
+        {'brand': 'the boutique', 'stars': 3,'price': 80, 'discount': null, 'color': 'Black', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342267.jpg'},
+        {'brand': 'the boutique', 'stars': 2,'price': 90, 'discount': null, 'color': 'Black', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341919.jpg'},
+        {'brand': 'the boutique', 'stars': 1,'price': 110, 'discount': null, 'color': 'Purple', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_340892.jpg'},
+        {'brand': 'the boutique', 'stars': 2,'price': 200, 'discount': 65, 'color': 'Red', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341907.jpg'},
+        {'brand': 'the boutique', 'stars': 3,'price': 210, 'discount': null, 'color': 'Blue', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341503.jpg'},
+        {'brand': 'the boutique', 'stars': 5,'price': 93, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341258.jpg'},
+        {'brand': 'the boutique', 'stars': 5,'price': 340, 'discount': null, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
+        {'brand': 'the boutique', 'stars': 5,'price': 120, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342323.jpg'},
+        {'brand': 'the boutique', 'stars': 5,'price': 80, 'discount': null, 'color': 'Black', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342267.jpg'},
+        {'brand': 'the boutique', 'stars': 4,'price': 90, 'discount': null, 'color': 'Black', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341919.jpg'},
+        {'brand': 'the boutique', 'stars': 4,'price': 110, 'discount': null, 'color': 'Purple', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_340892.jpg'},
+        {'brand': 'the boutique', 'stars': 4,'price': 200, 'discount': 100, 'color': 'Red', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341907.jpg'},
+        {'brand': 'the boutique', 'stars': 4,'price': 210, 'discount': 200, 'color': 'Blue', 'material': 'Linen','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341503.jpg'},
+        {'brand': 'the boutique', 'stars': 2,'price': 93, 'discount': null, 'color': 'Green', 'material': 'Cotton','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341258.jpg'},
+        {'brand': 'the boutique', 'stars': 2,'price': 340, 'discount': 120, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
+        {'brand': 'the boutique', 'stars': 1,'price': 340, 'discount': null, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
+        {'brand': 'the boutique', 'stars': 5,'price': 340, 'discount': null, 'color': 'White', 'material': 'Silk','img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_341262.jpg'},
        
     ],
     'shoes':[
@@ -206,6 +206,9 @@ const products = document.querySelector('.products');
 // products couter
 const productsCount = document.querySelector('.counter')
 
+// shopping cart element
+
+
 // go to top button
 const goTopBtn = document.querySelector('.go-top');
 // ----- END OF DOM ELEMENTS -----
@@ -226,12 +229,25 @@ function createProducts (product, endLoop) {
     boxDiv.classList.add('box')
     const img = document.createElement('img')
     const descDiv = document.createElement('div')
-    const pItemDesc = document.createElement('p')
-    pItemDesc.classList.add('item-desc')
+    const itemDescDiv = document.createElement('div')
+    itemDescDiv.classList.add('item-desc')
+    const pStars = document.createElement('p')
+    const pProductDesc = document.createElement('p')
+    pProductDesc.classList.add('product-desc')
+    const aBasket = document.createElement('a')
+    const aInner = document.createElement('p')
+    aInner.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>'
+    aBasket.appendChild(aInner)
+    aBasket.addEventListener('click', ()=> {
+        alert('Your product is successfully added')
+    })
+    pStars.innerHTML = `${mockData[product][i].stars}/5 <i class="fa-solid fa-star"></i>`
+    pStars.classList.add('stars')
+    itemDescDiv.append(pStars, pProductDesc, aBasket)
     if(product == 'jewelry'){
-        pItemDesc.textContent = `${mockData[product][i].material}  ${productSingular}`
+        pProductDesc.textContent = `${mockData[product][i].material}  ${productSingular}`
     } else {
-        pItemDesc.textContent = `${mockData[product][i].color}  ${productSingular}`
+        pProductDesc.textContent = `${mockData[product][i].color}  ${productSingular}`
     }
     
     const hr = document.createElement('hr')
@@ -244,7 +260,7 @@ function createProducts (product, endLoop) {
     }
     
     descDiv.classList.add('description')
-    descDiv.append(pItemDesc, hr, pPrice)
+    descDiv.append(itemDescDiv, hr, pPrice)
     img.src = mockData[product][i].img
     
     boxDiv.appendChild(img)
@@ -287,6 +303,8 @@ btnArray.forEach(btn => btn.addEventListener('click', () =>{
     products.innerHTML = ''
     createProducts(btn.textContent.toLowerCase(), 15);
 }))
+
+
 
 loadAll.addEventListener('click', () => {
     let currentProduct = categoryH2.textContent.toLowerCase();

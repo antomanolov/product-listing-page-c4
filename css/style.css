@@ -242,11 +242,24 @@ main {
     height: 80%;
 }
 
-.item-desc {
+/* .item-desc {
     margin-top: 0.2rem;
     text-align: center;
+} */
+
+.item-desc {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 2rem;
 }
 
+.stars i {
+    color: var(--primary-col);
+}
+
+.product-desc {
+    margin-right: 2rem;
+}
 
 
 #hr-price {
