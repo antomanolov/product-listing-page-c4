@@ -220,7 +220,9 @@ main {
 .filter-group1 h4,
 .filter-group2 h4 {
     text-align: center;
+    margin-bottom: 1.3rem;
 }
+
 
 .filter h3 {
     margin-bottom: var(--top-margin);

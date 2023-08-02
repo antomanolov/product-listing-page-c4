@@ -180,7 +180,6 @@ let mockData = {
     ],
 }
 
-
 const cloneData = {...mockData}
 
 // ----- DOM ELEMENTS -----
