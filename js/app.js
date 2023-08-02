@@ -1,6 +1,6 @@
 
 // This is the data object from where I get all the info for the product page
-const mockData = {
+let mockData = {
     'dresses': [
         { 'brand': 'the boutique', 'stars': 1, 'price': 620, 'discount': 30, 'color': 'Green', 'material': 'Cotton', 'img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342323.jpg' },
         { 'brand': 'the boutique', 'stars': 2, 'price': 80, 'discount': null, 'color': 'Black', 'material': 'Cotton', 'img': 'https://www.ivet.bg/userfiles/productthumbs/thumb_342267.jpg' },
@@ -180,6 +180,9 @@ const mockData = {
     ],
 }
 
+
+const cloneData = {...mockData}
+
 // ----- DOM ELEMENTS -----
 // filter hamburger
 const filterGroup1 = document.querySelector('.filter-group1');
@@ -299,6 +302,7 @@ function goTop() {
 }
 
 function sortFuncAlpha(action, key, keyword) {
+    
     if (action == 'ascending') {
         mockData[key].sort(function (a, b) {
             let textA = a[keyword]
@@ -319,6 +323,7 @@ function sortFuncAlpha(action, key, keyword) {
 // I made this function seperate from the alpha one, becaouse in the price we got discount too
 // and it's more verbose to separate the two functions, even on the price of repeating almost the same code
 function sortFuncPrice(action, key) {
+    
     let numA = 0
     let numB = 0
     if (action == 'ascending') {
@@ -356,6 +361,14 @@ function sortFuncPrice(action, key) {
     createProducts(key, mockData[key].length)
 }
 
+// filtering function
+function filterFunc(key, keyword, filterWord) {
+    mockData = {...cloneData}
+    let newArr = mockData[key].filter(el => el[filterWord] == keyword)
+    mockData[key] = newArr
+    createProducts(key, mockData[key].length)
+}
+
 // initial page call
 createProducts('dresses', 15);
 
@@ -373,6 +386,19 @@ btnArray.forEach(btn => btn.addEventListener('click', () => {
     createProducts(btn.textContent.toLowerCase(), 15);
 }))
 
+
+colorRadio.forEach(radio => radio.addEventListener('click', () => {
+    let product = categoryH2.textContent.toLowerCase()
+    let radioVal = radio.value
+    let keyword = 'color'
+    filterFunc(product, radioVal, keyword)
+}))
+materialRadio.forEach(radio => radio.addEventListener('click', () => {
+    let product = categoryH2.textContent.toLowerCase()
+    let radioVal = radio.value
+    let keyword = 'material'
+    filterFunc(product, radioVal, keyword) 
+}))
 
 
 loadAll.addEventListener('click', () => {
